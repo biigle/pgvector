@@ -1,4 +1,4 @@
-# Docker Image for pgvector
+# Docker image for pgvector
 
 This is a Docker image for [pgvector](https://github.com/pgvector/pgvector) build for [BIIGLE](https://github.com/biigle/core).
 
