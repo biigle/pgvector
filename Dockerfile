@@ -1,13 +1,13 @@
 # FROM postgres:14-alpine
 FROM postgres@sha256:3eab206b57cf9acb206359d14eb2d00cdd2c396ddd7cb246690788b22ed858c4
-LABEL org.opencontainers.image.source = "https://github.com/biigle/pgvector"
+LABEL org.opencontainers.image.source="https://github.com/biigle/pgvector"
 
 RUN apk add --no-cache --virtual .build-deps \
         git \
         build-base \
         clang \
         llvm13-dev \
-    && git clone --branch v0.5.0 https://github.com/pgvector/pgvector.git /tmp/pgvector \
+    && git clone --branch v0.8.0 https://github.com/pgvector/pgvector.git /tmp/pgvector \
     && cd /tmp/pgvector \
     && make OPTFLAGS="" \
     && make install \
